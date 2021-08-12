@@ -8,4 +8,4 @@ services:
 before_script: pip install docker-compose
 
 script:
-    - docker-compose run -e sh -c "echo $SECRET_KEY" app sh -c "python manage.py test && flake8"
+    - docker-compose run app sh -c "python manage.py test && flake8"
