@@ -16,7 +16,6 @@ class UserManager(BaseUserManager):
 
         return user
 
-
     def create_superuser(self, email: str, password: str):
         '''Creates and saves a new super user'''
         user = self.create_user(email, password)
@@ -39,4 +38,3 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
-
