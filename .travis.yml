@@ -1,3 +1,9 @@
+# safelist
+branches:
+    only:
+        - dev
+        - main
+
 language: python
 python:
     - "3.9"
